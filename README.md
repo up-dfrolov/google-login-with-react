@@ -35,13 +35,20 @@ Once started, you can access this project at [http://localhost:3000](http://loca
 
 
 /// UPD:
+
 Client side token retrieve.
+
 Using React.
+
 https://github.com/up-dfrolov/google-login-with-react
+
 To setup client id:
+
 https://stackoverflow.com/questions/42566296/google-api-authentication-not-valid-origin-for-the-client
 
 Serverside validation:
+
 https://developers.google.com/identity/sign-in/web/backend-auth
+
 https://stackoverflow.com/questions/359472/how-can-i-verify-a-google-authentication-api-access-token
 

@@ -16,12 +16,16 @@ class LoginButton extends React.Component {
   onSignIn = googleUser => {
     this.toggleLoggedIn();
 
-    let user = googleUser.getBasicProfile();
+    // let user = googleUser.getBasicProfile();
     let id_token = googleUser.getAuthResponse().id_token;
 
-    console.log('google user obj', user);
+    // console.log('google user obj', user);
     console.log('google_id_token', id_token);
     // plus any other logic here
+
+    const node = document.querySelectorAll('#edit-me')[0];
+    node.innerHTML = `<span style="color:red;max-width:500px;word-wrap:break-word;">`+JSON.stringify(id_token)+`</span>`;
+    this.props.updated();
   };
 
   renderGoogleLoginButton = () => {
@@ -71,6 +75,8 @@ class LoginButton extends React.Component {
             Logout
           </button>
         )}
+        <br />
+        <div id="edit-me">Token will be here after login</div>
       </div>
     );
   }
